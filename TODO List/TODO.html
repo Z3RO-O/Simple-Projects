@@ -14,7 +14,7 @@
   <body style="background-image: url(todobg.jpg); background-size: cover">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="project2.html">TO-DO List</a>
+        <a class="navbar-brand" href="TODO.html">TO-DO List</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,11 +32,11 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link active" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle active"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -54,7 +54,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Contact</a>
+              <a class="nav-link active">Contact</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -64,7 +64,7 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success">Search</button>
+            <button class="btn btn-outline-light">Search</button>
           </form>
         </div>
       </div>
@@ -80,8 +80,8 @@
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control" id="desc" rows="3"></textarea>
       </div>
-      <button class="btn btn-primary" id="add">Add to list</button>
-      <button class="btn btn-primary" onclick="clearstorage()">
+      <button class="btn btn-dark" id="add">Add to list</button>
+      <button class="btn btn-warning" onclick="clearstorage()">
         Clear List
       </button>
       <div
@@ -145,7 +145,7 @@
               <th scope="row">${index + 1}</th>
               <td>${element[0]}</td>
               <td>${element[1]}</td>
-              <td><button class="btn btn-primary btn-sm" onclick="deleted(${index})">Delete</button></td>
+              <td><button class="btn btn-danger btn-sm" onclick="deleted(${index})">Delete</button></td>
             </tr>`;
         });
         tableBody.innerHTML = str;
