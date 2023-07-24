@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flash Cards</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <br />
+    <center>
+        <div style="border-style: solid; padding: 10px; border-radius: 10px; background-color: rgb(240, 250, 215); border-color: rgb(12, 179, 65); margin-bottom: 20px">
+      <h1 id="numbers">
+        <script>
+          // To generate two random numbers
+          var num1 = Math.floor(Math.random() * 10) + 1;
+          var num2 = Math.floor(Math.random() * 10) + 1;
+          document.write(num1 + " + " + num2);
+          var correctAnswer = num1 + num2;
+        </script>
+      </h1>
+      <p>Hello, Please enter your answer:</p>
+      <input id="ans" />
+      <button type="button" onclick="addition()">Submit</button>
+      <input type="button" value="Get a new Sum" onclick="newSum()" />
+      <br /><br />
+      <h3 id="output"></h3>
+      </div>
+      <div style="display: inline-block;border-style: solid; padding: 10px; border-radius: 10px; background-color: antiquewhite; border-color: red;">
+        <p>Press Enter : To Submit</p>
+        <p>Press Tab+Enter : To Reload the Page and get new Sum</p>
+      </div>
+    </center>
+    <script>
+      const ans = document.getElementById("ans");
+      let keysPressed = {};
+      ans.addEventListener("keydown", function (event) {
+        keysPressed[event.key] = true;
+        if (keysPressed.Enter) addition();
+        if (keysPressed.Enter && keysPressed.Tab) window.location.reload();
+      });
+    </script>
+  </body>
+</html>
