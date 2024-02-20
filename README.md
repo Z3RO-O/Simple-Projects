@@ -1,7 +1,13 @@
-# Simple-JS-Projects
+# Simple-Web-Projects
 
-# Clock : 
+## Clock : 
 Website which shows clock with current date and time.
 
-# TODO List : 
+## TODO List / Task Tracker (React): 
 Website for your daily tasks. You can add, delete and clear the list of your tasks.
+
+## Simple-Interest-Calculator:
+A Calculator to Calculate Simple Interest and Compound Interest
+
+## Flash Cards:
+A simple random number game
