@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  
+
+<head>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script:wght@400;500&family=Dongle:wght@300&family=Island+Moments&family=Kdam+Thmor+Pro&family=Lobster&family=Merriweather:wght@300&family=Mochiy+Pop+P+One&family=Mukta:wght@200&family=Neonderthaw&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+  <title>Simple Interest Calculator</title>
+</head>
+
+<body>
+  <center>
+    <div class="maindiv">
+      <h1 class="heading"> Simple Interest Calculator</h1>
+        <hr class="line">
+        <div class="input">
+      <label><strong>Amount</strong></label>
+      <!-- input for principal -->
+      <input type="number" oninput="checkPositive()" id="principal" />
+      <br />
+      <label><strong>Rate</strong></label>
+      <!-- Slider input for Rate -->
+      <input type="range" onchange="updateRate()" id="rate" min="1" max="20" value="10.25" step="0.25" />
+      <!-- To display corresponding value due to slider  -->
+      <span id="rate_val"> <strong>10.25%</strong></span>
+      <br />
+      <label><strong>No of years</strong></label>
+      <!-- input to select the number of years -->
+      <select id="years">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select><br />
+      <label><strong>Interest</strong></label>
+      <span id="result"></span><br />
+
+    <div class="float"></div>      
+          
+      <!-- button to calculate and display the result -->
+      <div class="btn">
+      <button class="click" onclick="compute()">Simple Interest</button>
+      <button class="click" onclick="compute1()">Compound Interest</button>
+      </div>
+      <span id="result"></span>
+      <div class="img">
+        <img src="kisspng-banknote-finance-download-icon-financial-wealth-coins-banknotes-5a82a968b570d8.9881779115185124887432-removebg-preview.png">
+      </div>
+          
+      <footer>
+        <p class="copyright">&#169; Everyone can Get Rich its simple</p>
+        <p>This Calculator belongs to <br> Vaibhav Singh {z3ro}</p>
+      </footer>
+    </div>
+  </div>
+  </center>
+</body>
+
+</html>
