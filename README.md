@@ -21,3 +21,7 @@ A simple random number game
 ## Gym Form
 
 A simple ui for learning making forms with CSS styling
+
+## Simple-chrome-extension
+
+A simple extension to change color of body of current tab
